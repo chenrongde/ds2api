@@ -69,3 +69,4 @@ yarn-error.log*
 # 其他
 .DS_Store
 Thumbs.db
+!config.json

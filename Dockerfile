@@ -31,7 +31,6 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 COPY --from=busybox-tools /bin/busybox /usr/local/bin/busybox
 EXPOSE 5001
-CMD ["/usr/local/bin/ds2api"]
 
 FROM runtime-base AS runtime-from-source
 COPY --from=go-builder /out/ds2api /usr/local/bin/ds2api
@@ -64,3 +63,18 @@ COPY --from=dist-extract /out/config.example.json /app/config.example.json
 COPY --from=dist-extract /out/static/admin /app/static/admin
 
 FROM runtime-from-source AS final
+
+# ============== 以下为新增内容 ==============
+
+# 1. 复制你仓库里的 config.json 到镜像
+COPY config.json /app/config.json
+
+# 2. 创建启动脚本：启动时自动把配置文件复制到 /data/ 目录
+RUN echo '#!/bin/sh' > /usr/local/bin/start.sh && \
+    echo 'mkdir -p /data' >> /usr/local/bin/start.sh && \
+    echo 'cp /app/config.json /data/config.json' >> /usr/local/bin/start.sh && \
+    echo 'exec /usr/local/bin/ds2api' >> /usr/local/bin/start.sh && \
+    chmod +x /usr/local/bin/start.sh
+
+# 3. 用启动脚本替换原来的 CMD
+CMD ["/usr/local/bin/start.sh"]

@@ -1,0 +1,77 @@
+{
+  "accounts": [
+    {
+      "email": "h09014436624@gmail.com",
+      "password": "59996633b"
+    },
+    {
+      "email": "s01065107118@gmail.com",
+      "password": "59996633b"
+    },
+    {
+      "email": "a904895506@gmail.com",
+      "password": "59996633b"
+    },
+    {
+      "email": "ado798451@gmail.com",
+      "password": "59996633b"
+    },
+    {
+      "email": "904895506@qq.com",
+      "password": "59996633b"
+    },
+    {
+      "email": "3461437892@qq.com",
+      "password": "59996633b"
+    },
+    {
+      "email": "chenyu1951@qq.com",
+      "password": "59996633b"
+    },
+    {
+      "name": "ab904895506@gmail.com",
+      "email": "ab904895506@gmail.com",
+      "password": "59996633b"
+    },
+    {
+      "email": "yl7192230@gmail.com",
+      "password": "59996633b"
+    },
+    {
+      "name": "cc904895506@gmail.com",
+      "email": "cc904895506@gmail.com",
+      "password": "59996633b"
+    },
+    {
+      "email": "rongde1997@gmail.com",
+      "password": "59996633b"
+    },
+    {
+      "name": "qqchenronhde@gmail.com",
+      "email": "qqchenronhde@gmail.com",
+      "password": "59996633b"
+    },
+    {
+      "name": "chenrongde522@gmail.com",
+      "email": "chenrongde522@gmail.com",
+      "password": "59996633b"
+    },
+    {
+      "name": "gga39705@gmail.com",
+      "email": "gga39705@gmail.com",
+      "password": "59996633b"
+    }
+  ],
+  "api_keys": [
+    {
+      "key": "123456"
+    }
+  ],
+  "auto_delete": {},
+  "history_split": {
+    "enabled": true
+  },
+  "keys": [
+    "123456"
+  ]
+}
